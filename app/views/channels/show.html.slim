@@ -4,6 +4,14 @@ p
   strong Name:
   = @channel.name
 
-= link_to 'Edit', edit_channel_path(@channel)
-'|
+table.table
+  thead
+    tr
+      th Name
+
+  tbody
+    - @channel.messages.each do |message|
+      tr
+        td = message.text
+
 = link_to 'Back', channels_path
