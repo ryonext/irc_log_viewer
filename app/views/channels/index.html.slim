@@ -1,21 +1,11 @@
 h1 Listing channels
 
-table
+table.table
   thead
     tr
       th Name
-      th
-      th
-      th
 
   tbody
     - @channels.each do |channel|
       tr
-        td = channel.name
-        td = link_to 'Show', channel
-        td = link_to 'Edit', edit_channel_path(channel)
-        td = link_to 'Destroy', channel, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Channel', new_channel_path
+        td = link_to channel.name, channel
