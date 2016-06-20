@@ -1,8 +1,8 @@
 h1 New Messages
 
-= form_for Message.new do |f|
+= form_for @irc_log do |f|
   .form-group
     label for="irc_log"
       | IRC Log
-    = file_field_tag :irc_log
+    = f.file_field :log_file
   = f.submit class: "btn btn-primary"
