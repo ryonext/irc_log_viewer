@@ -17,6 +17,7 @@ group :development, :test do
   gem "faker"
   gem "pry-byebug"
   gem "pry-stack_explorer"
+  gem "rspec-rails"
 end
 
 group :development do
