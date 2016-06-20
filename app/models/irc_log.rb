@@ -5,7 +5,18 @@ class IrcLog
   def save
     # Open file
     # each lines
+    File.foreach(log_file.tempfile) do |line|
+      build_message_from_log(line)
+    end
     # fetch each object
     # import record
+  end
+
+  def build_message_from_log(log)
+    result = /^(\d\d:\d\d)? (.+)?: (.+)?$/.match(log)
+    time = result[1]
+    user = result[2]
+    text = result[3]
+    Message.new(text: text)
   end
 end
