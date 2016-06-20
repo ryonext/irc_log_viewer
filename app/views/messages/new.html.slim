@@ -1,0 +1,7 @@
+h1 New Messages
+
+= form_for Message.new do
+  .form-group
+    label for="irc_log"
+      | IRC Log
+    = file_field_tag :irc_log
