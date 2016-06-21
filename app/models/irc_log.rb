@@ -21,6 +21,6 @@ class IrcLog
     time = result[1]
     user = result[2]
     text = result[3]
-    Message.new(text: text, channel: channel)
+    Message.create(text: text, channel: channel)
   end
 end
