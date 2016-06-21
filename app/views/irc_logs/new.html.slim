@@ -5,4 +5,8 @@ h1 New Messages
     label for="irc_log"
       | IRC Log
     = f.file_field :log_file
+  .form-group
+    label for="channel_name"
+      | Channel name
+    = f.text_field :channel_name, class: "form-control"
   = f.submit class: "btn btn-primary"

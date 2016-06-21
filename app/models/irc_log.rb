@@ -1,6 +1,6 @@
 class IrcLog
   include ActiveModel::Model
-  attr_accessor :log_file
+  attr_accessor :log_file, :channel_name, :date
 
   def save
     # Open file
