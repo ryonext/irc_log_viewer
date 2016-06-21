@@ -14,6 +14,9 @@ class IrcLog
 
   def build_message_from_log(log)
     result = /^(\d\d:\d\d)? (.+)?: (.+)?$/.match(log)
+    unless result
+      return nil
+    end
     time = result[1]
     user = result[2]
     text = result[3]
