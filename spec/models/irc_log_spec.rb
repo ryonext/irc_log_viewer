@@ -2,7 +2,8 @@ require "rails_helper"
 
 describe IrcLog do
   describe "#build_message_from_log" do
-    subject { irc_log.build_message_from_log(log) }
+    subject { irc_log.build_message_from_log(log, channel) }
+    let(:channel) { Channel.new }
     let(:irc_log) { IrcLog.new }
 
     context "Message by user" do
