@@ -15,6 +15,7 @@ gem "uglifier", ">= 1.3.0"
 group :development, :test do
   gem "byebug"
   gem "faker"
+  gem "factory_girl_rails"
   gem "pry-byebug"
   gem "pry-stack_explorer"
   gem "rspec-rails"
