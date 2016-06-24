@@ -20,11 +20,10 @@ ActiveRecord::Schema.define(version: 20160619124403) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.integer  "user_id",      limit: 4
-    t.integer  "channel_id",   limit: 4
-    t.string   "references",   limit: 255
-    t.string   "text",         limit: 255
-    t.datetime "published_at"
+    t.integer  "user_id",      limit: 4,   null: false
+    t.integer  "channel_id",   limit: 4,   null: false
+    t.string   "text",         limit: 255, null: false
+    t.datetime "published_at",             null: false
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end

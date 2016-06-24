@@ -7,11 +7,15 @@ p
 table.table
   thead
     tr
+      th At
       th Name
+      th Text
 
   tbody
     - @channel.messages.each do |message|
       tr
+        td = message.published_at
+        td = message.user.name
         td = message.text
 
 = link_to 'Back', channels_path

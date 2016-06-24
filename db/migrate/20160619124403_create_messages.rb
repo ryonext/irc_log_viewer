@@ -1,11 +1,10 @@
 class CreateMessages < ActiveRecord::Migration
   def change
     create_table :messages do |t|
-      t.references :user, index: true, foreign_key: true
-      t.references :channel, index: true, foreign_key: true
-      t.string :references
-      t.string :text
-      t.datetime :published_at
+      t.references :user, index: true, foreign_key: true, null: false
+      t.references :channel, index: true, foreign_key: true, null: false
+      t.string :text, null: false
+      t.datetime :published_at, null: false
 
       t.timestamps null: false
     end
