@@ -12,7 +12,7 @@ table.table
       th Text
 
   tbody
-    - @channel.messages.each do |message|
+    - @messages.each do |message|
       tr
         td = message.published_at
         td = message.user.name

@@ -8,4 +8,4 @@ table.table
   tbody
     - @channels.each do |channel|
       tr
-        td = link_to channel.name, channel
+        td = link_to channel.name, channel_messages_path(channel)

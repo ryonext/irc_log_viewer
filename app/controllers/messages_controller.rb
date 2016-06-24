@@ -1,10 +1,11 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
+  before_action :set_channel, only: [:index]
 
   # GET /messages
   # GET /messages.json
   def index
-    @messages = Message.all
+    @messages = @channel.messages
   end
 
   # GET /messages/1
@@ -70,5 +71,9 @@ class MessagesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
       params.require(:message).permit(:user_id, :channel, :references, :text, :published_at)
+    end
+
+    def set_channel
+      @channel = Channel.find(params[:channel_id])
     end
 end
