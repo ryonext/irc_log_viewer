@@ -13,9 +13,15 @@ gem "sdoc", "~> 0.4.0", group: :doc
 gem "slim-rails"
 gem "twitter-bootstrap-rails"
 gem "uglifier", ">= 1.3.0"
+gem "unicorn"
 
 group :development, :test do
   gem "byebug"
+  gem "capistrano"
+  gem "capistrano-bundler"
+  gem "capistrano-rails"
+  gem "capistrano-rbenv"
+  gem "capistrano3-unicorn"
   gem "faker"
   gem "factory_girl_rails"
   gem "pry-byebug"
