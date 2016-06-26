@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160619124403) do
   end
 
   add_index "messages", ["channel_id"], name: "index_messages_on_channel_id", using: :btree
+  add_index "messages", ["published_at"], name: "index_messages_on_published_at", using: :btree
   add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|

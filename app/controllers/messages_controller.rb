@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
   def index
-    @messages = @channel.messages
+    @messages = @channel.messages.order_by_published
   end
 
   # GET /messages/1
