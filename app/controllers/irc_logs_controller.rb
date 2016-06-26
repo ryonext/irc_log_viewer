@@ -8,7 +8,7 @@ class IrcLogsController < ApplicationController
 
     respond_to do |format|
       if @irc_log.save
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
+        format.html { render :new }
         format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new }
