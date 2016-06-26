@@ -6,11 +6,9 @@ class Message < ActiveRecord::Base
   before_validation :generate_key
   validates :message_key, uniqueness: true
 
-  private
-
-    def generate_key
-      unless message_key
-        self.message_key = published_at.to_s + Digest::SHA1.hexdigest(text)
-      end
+  def generate_key
+    unless message_key
+      self.message_key = published_at.to_s + Digest::SHA1.hexdigest(text)
     end
+  end
 end

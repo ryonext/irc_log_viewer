@@ -11,7 +11,8 @@ class IrcLog
       build_message_from_log(line, channel, date_str)
     end.compact!
     # import record
-    Message.import(messages)
+    #Message.import(messages)
+    messages.each {|m| m.save }
   end
 
   def build_message_from_log(log, channel, date_str)
