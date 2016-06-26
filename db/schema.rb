@@ -20,15 +20,17 @@ ActiveRecord::Schema.define(version: 20160619124403) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.integer  "user_id",      limit: 4,   null: false
-    t.integer  "channel_id",   limit: 4,   null: false
-    t.string   "text",         limit: 255, null: false
-    t.datetime "published_at",             null: false
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.integer  "user_id",      limit: 4,     null: false
+    t.integer  "channel_id",   limit: 4,     null: false
+    t.text     "text",         limit: 65535, null: false
+    t.datetime "published_at",               null: false
+    t.string   "message_key",  limit: 255,   null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   add_index "messages", ["channel_id"], name: "index_messages_on_channel_id", using: :btree
+  add_index "messages", ["message_key"], name: "index_messages_on_message_key", unique: true, using: :btree
   add_index "messages", ["published_at"], name: "index_messages_on_published_at", using: :btree
   add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
 
