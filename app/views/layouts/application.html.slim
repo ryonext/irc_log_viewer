@@ -25,12 +25,10 @@ html lang="en"
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand href="#"IrcLogger
+          a.navbar-brand href="/"IrcLogger
           .navbar-collapse.collapse.navbar-responsive-collapse
             ul.nav.navbar-nav
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
+              li= link_to "Import from IRC log", new_irc_log_path
 
     .container
       .row
@@ -42,9 +40,7 @@ html lang="en"
             h3 Sidebar
             ul.nav.nav-list
               li.nav-header Sidebar
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
+              li= link_to "Import from IRC log", new_irc_log_path
 
       footer
         p &copy; Company 2016
