@@ -14,7 +14,7 @@ table.table
   tbody
     - @messages.each do |message|
       tr
-        td = message.published_at
+        td = display_time(message.published_at)
         td = message.user.name
         td = message.text
 

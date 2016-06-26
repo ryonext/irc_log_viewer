@@ -14,6 +14,6 @@ end
     channel: channels.sample,
     user: users.sample,
     text: Faker::Lorem.sentence,
-    published_at: Faker::Time.between(2.days.ago, Date.today),
+    published_at: Faker::Time.between(2.days.ago, Time.zone.now),
   )
 end
