@@ -4,7 +4,7 @@ p
   strong Name:
   = @channel.name
 
-= paginate @messages
+= link_to_next_page @messages, "Next"
 
 table.table
   thead
@@ -19,5 +19,7 @@ table.table
         td = display_time(message.published_at)
         td = message.user.name
         td = message.text
+
+= link_to_previous_page @messages, "Prev"
 
 = link_to 'Back', channels_path
