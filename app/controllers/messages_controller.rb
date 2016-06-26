@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
   def index
-    @messages = @channel.messages.order_by_published
+    @messages = @channel.messages.order_by_published.page params[:page]
   end
 
   # GET /messages/1

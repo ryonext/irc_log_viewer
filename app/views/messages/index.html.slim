@@ -4,6 +4,8 @@ p
   strong Name:
   = @channel.name
 
+= paginate @messages
+
 table.table
   thead
     tr
@@ -12,7 +14,7 @@ table.table
       th Text
 
   tbody
-    - @messages.each do |message|
+    - @messages.reverse_each do |message|
       tr
         td = display_time(message.published_at)
         td = message.user.name

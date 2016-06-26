@@ -9,9 +9,9 @@ users = 5.times.map do
   User.create(name: Faker::Name.name)
 end
 
-20.times do
+100.times do
   Message.create(
-    channel: channels.sample,
+    channel: channels.first,
     user: users.sample,
     text: Faker::Lorem.sentence,
     published_at: Faker::Time.between(2.days.ago, Time.zone.now),
