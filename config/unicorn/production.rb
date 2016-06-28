@@ -1,5 +1,5 @@
 # paths
-app_path = "/var/www/irc_logger"
+app_path = "/var/www/irc_log_viewer"
 working_directory "#{app_path}/current"
 pid               "#{app_path}/current/tmp/pids/unicorn.pid"
 
