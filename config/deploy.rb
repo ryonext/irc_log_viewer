@@ -2,6 +2,7 @@ lock '3.5.0'
 
 set :application, 'irc_log_viewer'
 set :repo_url, 'git@github.com:ryonext/irc_log_viewer.git'
+set :branch, :deploy
 
 set :rbenv_type, :user
 set :rbenv_ruby, "2.3.1"
