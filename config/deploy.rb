@@ -25,4 +25,7 @@ namespace :deploy do
       # end
     end
   end
+  after :publishing, :restart do
+    invoke "unicorn:restart"
+  end
 end
