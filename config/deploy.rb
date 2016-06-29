@@ -6,6 +6,7 @@ set :branch, :deploy
 
 set :rbenv_type, :user
 set :rbenv_ruby, "2.3.1"
+set :unicorn_pid, -> { File.join(current_path, "tmp", "unicorn.pid") }
 
 namespace :deploy do
   before :migrate, :create_db do
