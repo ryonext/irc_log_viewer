@@ -1,4 +1,5 @@
 require "capistrano/setup"
+require "capistrano/assets"
 require "capistrano/deploy"
 require 'capistrano/rbenv'
 require 'capistrano/bundler'
